@@ -1,0 +1,88 @@
+
+
+    <div class="container">
+        <div class="row">
+          <div class="col">
+            <h2>Create Rules</h2><br>
+            <form #f="ngForm" (ngSubmit)="onSubmit(f)" >
+    
+              <mat-form-field appearance="outline" class="myclass" [color]="'accent'">
+                  <mat-label>Currency</mat-label>
+                  <input matInput type="number" placeholder="Enter the Currency"
+                  #currency="ngModel" ngModel min="1" 
+                  name="currency" 
+                    required  >
+                  
+                  <mat-error *ngIf="currency.touched && !currency.valid"> ** Please Enter the Currency</mat-error>
+             </mat-form-field>
+    
+              
+  
+            <mat-form-field appearance="outline" class="myclass" [color]="'accent'">
+              <mat-label>Long Trigger</mat-label>
+              <input matInput type="text" placeholder="Enter the Long Trigger"
+              #longtrigger="ngModel" ngModel 
+              name="longtrigger" 
+                required  >
+              
+              <mat-error *ngIf="longtrigger.touched && !longtrigger.valid"> ** Please Enter the Long Trigger</mat-error>
+        </mat-form-field>
+  
+
+
+        <mat-form-field appearance="outline" class="myclass" [color]="'accent'">
+            <mat-label>Short Trigger</mat-label>
+            <input matInput type="text" placeholder="Enter the Short Trigger"
+            #shorttrigger="ngModel" ngModel 
+            name="shorttrigger" 
+              required  >
+            
+            <mat-error *ngIf="shorttrigger.touched && !shorttrigger.valid"> ** Please Enter the Short Trigger</mat-error>
+      </mat-form-field>
+
+
+      <mat-form-field appearance="outline" class="myclass" [color]="'accent'">
+        <mat-label>Duration</mat-label>
+        <input matInput type="text" placeholder="Enter the Duration"
+        #duration="ngModel" ngModel 
+        name="duration" 
+          required  >
+        
+        <mat-error *ngIf="duration.touched && !duration.valid"> ** Please Enter the Duration</mat-error>
+  </mat-form-field>
+
+
+
+  <mat-form-field appearance="outline" class="myclass" [color]="'accent'">
+    <mat-label>LP</mat-label>
+    <input matInput type="text" placeholder="Enter the LP"
+    #lp="ngModel" ngModel 
+    name="lp" 
+      required  >
+    
+    <mat-error *ngIf="lp.touched && !lp.valid"> ** Please Enter the LP</mat-error>
+</mat-form-field>
+  
+        
+    
+                  
+      
+          
+              <button mat-raised-button color="accent" [disabled]="!f.valid">Submit</button>&nbsp;
+
+              <a mat-raised-button color="accent" class="btn btn-primary" routerLink="/home">Cancel</a>
+    
+            </form>
+                
+           
+          </div>
+    
+        </div>
+    
+      </div>
+
+
+
+
+    
+

@@ -1,0 +1,51 @@
+<div class="container-fluid">
+
+    <app-header></app-header>
+    
+    <div class="data_body" >
+        <div *ngFor="let item of data_items">
+            <div class="rule_monitor_item_title">
+                <span >
+                    <i class="fa-sharp fa-solid fa-star"></i>
+                    </span>
+                 <h5 style="font-weight: bold;">{{item.title}}</h5> 
+                 <button mat-icon-button [matMenuTriggerFor]="menu" style="cursor:pointer;margin-top: -8px;">
+                    <mat-icon>more_vert</mat-icon>
+                  </button>  
+                <mat-menu #menu="matMenu">
+                    <button mat-menu-item (click)="openDialog(item)">View Position Details</button>
+                    <button mat-menu-item (click)="openDialog2(item)">View Audit Details</button>
+                    <button mat-menu-item>View Rule</button>
+                  </mat-menu>
+            </div>
+            <div class="rule_monitor_item_ccy">
+                <div style="line-height: 12px; text-align: center;">
+                    <p>CCY</p>
+                    <p class="rule_monitor_item_ccy_value">{{item.ccy}}</p>
+                </div>
+                
+                <div class="vl"></div>
+                <div style="line-height: 12px; text-align: center;" >
+                    <p>LONG</p>
+                    <p class="rule_monitor_item_ccy_value">{{item.long}}</p>
+                </div>
+                
+                <div class="vl"></div>
+                <div style="line-height: 12px;text-align: center;">
+                    <p>SHORT</p>
+                    <p class="rule_monitor_item_ccy_value">{{item.short}}</p>
+                </div>
+                
+            </div>
+            <hr style="margin-top: -0.5px;width: 90%; ">
+
+            <div class="rule_monitor_item_pos">
+                <p>POSITION</p>
+                <h3 [style.color]="item.position>0 ? '#00b050':'red'">{{item.position > 0? '+' + (item.position |number) : item.position |number}}</h3>
+                <p>10/13/2022 12:45:33 123</p>
+            </div>
+           
+        </div>
+        
+    </div>
+</div>

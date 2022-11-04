@@ -1,0 +1,43 @@
+
+<div class="container-fluid" style="margin-top: 50px;">
+
+    <div>
+    
+        <table class="table table-bordered table-hover">
+          <thead>
+            <th>Rule</th>
+            <th>Currency</th>
+            <th>Long Trigger</th>
+            <th>Short Trigger</th>
+            <th>Duration</th>
+            <th>LP</th>
+            <th>Position</th>
+            <th>Actions</th>
+          </thead>
+          <tbody cdkDropList (cdkDropListDropped)="drop($event)">
+            <tr *ngFor="let item of allRules | paginate: { itemsPerPage: 5, currentPage: p };index as i"
+                cdkDrag>
+              
+              <td> {{item.ruleId}} </td>
+              <td> {{item.currency}}</td>
+              <td> {{item.longTrigger}} </td>
+              <td> {{item.shortTrigger}} </td>
+              <td> {{item.duration}} </td>
+              <td> {{item.lp}}</td>
+              <td> {{item.position}} </td>
+              <td><span style="cursor: pointer;" (click)="onEdit(item)" title="edit"><i class="fa-solid fa-pencil"></i></span>&nbsp;
+                    <span style="cursor: pointer;" (click)="onDelete(item)" title="delete"><i class="fa-solid fa-trash-can"></i></span>&nbsp;
+                    <span style="cursor: pointer;" title="audit"><i class="fa-solid fa-backward"></i></span>&nbsp;
+                    </td>
+                    
+            </tr>
+          </tbody>
+        </table>
+        <pagination-controls (pageChange)="p = $event"
+          style="float:right ;"
+        ></pagination-controls>
+      </div>
+
+      <button routerLink="/home" class="btn btn-primary" style="background-color: #3c4da8; ">Back</button>
+</div>
+

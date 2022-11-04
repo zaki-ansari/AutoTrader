@@ -1,0 +1,47 @@
+<div class="container-fluid">
+
+    <app-header></app-header>
+
+    <div class="row">
+        <div class="col">
+            <table class="table">
+                <thead>
+                    <th>Name</th>
+                    <th>Currency</th>
+                    <th>Tenor</th>
+                    <th>Book</th>
+                    <th>From Time(EST)</th>
+                    <th>To Time(EST)</th>
+                    <th>Liquidity Provider</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of ruleconfigdata">
+                        <td>{{item.name}}</td>
+                        <td>{{item.currency}}</td>
+                        <td>{{item.tenor}}</td>
+                        <td>{{item.book}}</td>
+                        <td>{{item.fromtime}}</td>
+                        <td>{{item.totime}}</td>
+                        <td>{{item.liquidityprovider}}</td>
+                        <td>{{item.status}}</td>
+                        <td><span style="cursor: pointer;" matTooltip="edit"><i class="fa-sharp fa-solid fa-pen-to-square"></i></span>&nbsp;
+                            <span style="cursor: pointer;" matTooltip="copy"><i class="fa-regular fa-copy"></i></span>&nbsp;
+                            <span style="cursor: pointer;" matTooltip="audit" (click)="openDialog()"><i class="fa-solid fa-circle-info"></i></span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+        
+                
+
+            
+
+    
+
+
+
+</div>    

@@ -1,0 +1,27 @@
+table {
+	/* border-collapse: collapse;  */
+	margin: auto;
+    font-size: 16px;
+    margin-top: 10px;
+	}
+
+/* Zebra striping */
+ /* tr:nth-of-type(odd) { 
+	background: #eee; 
+	}  */
+
+th {   
+	font-weight: bold; 
+	}
+
+td, th { 
+	padding: 15px; 
+	/* border: 1px solid #ccc;  */
+	text-align: left; 
+    
+	
+	}
+    table,tr,thead{
+        border: 1px solid black;
+		
+    }

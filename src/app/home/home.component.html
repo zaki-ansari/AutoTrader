@@ -1,0 +1,36 @@
+<div class="container-fluid">
+    <app-header></app-header>
+    <!-- <div class="project_logo_name">
+        <div>
+            <img class="img_logo" src="https://ccbncaassoc.wliinc22.com/external/wcpages/wcwebcontent/webcontentpage.aspx?contentid=1457" alt="">
+        </div>
+        <div class="project_name">
+            AutoTrader
+        </div>
+    </div>
+    
+    <div class="buttons_tab bg_header">
+        <ul>
+            <li>Rule Monitor</li>
+            <li>Rule Config</li>
+        </ul>
+        
+    </div> -->
+    <div class="buttons_tab">
+        <button class="btn btn-primary" routerLink="/rules">Rules</button>&nbsp;
+        <button class="btn btn-primary">Positions</button>&nbsp;
+        <button class="btn btn-primary" routerLink="/createrules">Create Rules</button>
+    </div>
+
+    <!-- <div class="data_body" >
+        <div *ngFor="let item of data_items">{{item.id}}
+            <span class="txt_r" [matMenuTriggerFor]="menu"><i class="fa-solid fa-ellipsis-vertical"></i></span>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item>View Position Details</button>
+                <button mat-menu-item>View Audit Details</button>
+                <button mat-menu-item>View Rule</button>
+              </mat-menu>
+        </div>
+        
+    </div> -->
+</div>

@@ -1,0 +1,66 @@
+.buttons_tab{
+    margin: auto;
+    text-align: center;
+    margin-top: 10px;
+    
+}
+.bg_header{
+    font-size: 14px;
+    min-height: 38px;
+}
+.bg_header>ul{
+    display: flex;
+    /* border: 1px solid red; */
+    background-color: #3e50b4;
+    color:  white;
+    justify-content: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    
+
+    
+}
+.bg_header li{
+    padding: 0.6em 1em;
+    cursor: pointer;
+}
+.bg_header>button{
+    color:  #c4c9e8;
+}
+
+.img_logo{
+    height: 46px;
+}
+
+.project_logo_name{
+    display: flex;
+}
+
+.project_name{
+    font-size: 24px;
+    color: #343f43;
+    font-weight: 300;
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+.data_body{
+    display: grid;
+    justify-content: center;
+    width: auto;
+    margin: 0 40px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 200px);
+    gap: 60px 30px;
+    margin-top: 20px;
+
+
+}
+.data_body>div{
+    border: 2px solid grey;
+}
+.txt_r{
+    margin-left: 300px;
+    cursor: pointer;
+}

@@ -1,0 +1,6 @@
+.bg_dialog{
+    display: flex;
+    justify-content: space-between;
+    background-color: gainsboro;
+    height: 37px;
+}

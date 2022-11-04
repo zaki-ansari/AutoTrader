@@ -1,0 +1,48 @@
+<div style="margin: 5px;padding: 5px;">
+    
+    <div class="form-group">
+        <label for="">Rule </label>
+        <input type="number" class="form-control" 
+         placeholder="Enter the id" 
+          [(ngModel)]="rules.ruleId" readonly>
+    </div>
+    <div class="form-group">
+        <label for="">Currency</label>
+        <input type="text" class="form-control" 
+         placeholder="Enter the Currency" value="rules.currency"
+         [(ngModel)]="rules.currency">
+    </div>
+    <div class="form-group">
+        <label for="">Long Trigger </label>
+        <input type="text" class="form-control"  placeholder="Enter the LongTrigger"
+         [(ngModel)]="rules.longTrigger">
+    </div>
+    <div class="form-group">
+        <label for="">Short Trigger </label>
+        <input type="text" class="form-control"  placeholder="Enter the ShortTrigger"
+         [(ngModel)]="rules.shortTrigger" >
+    </div>
+
+    <div class="form-group">
+        <label for="">Duration</label>
+        <input type="text" class="form-control"  placeholder="Enter the Duration"
+         [(ngModel)]="rules.duration">
+    </div>
+    <div class="form-group">
+        <label for="">LP</label>
+        <input type="text" class="form-control"  placeholder="Enter the status"
+         [(ngModel)]="rules.lp" >
+    </div>
+   
+   
+   
+  
+    <hr>
+    <div class="form-group">
+        <button (click)="onupdate()" class="btn btn-success" 
+        [disabled]="!issubmitDissabled">Submit</button>
+        <br><br> 
+    </div>
+  
+  </div>
+

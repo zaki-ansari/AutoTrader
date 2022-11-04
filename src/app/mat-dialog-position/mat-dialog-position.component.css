@@ -1,0 +1,23 @@
+.bg_dialog{
+    display: flex;
+    justify-content: space-between;
+    background-color: gainsboro;
+    height: 37px;
+}
+table{
+    margin-top: 5px;
+    border-bottom: 1px solid grey;
+    border-top: 1px solid grey;
+}
+thead{
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+    
+}
+td, th { 
+	padding: 15px; 
+	/* border: 1px solid #ccc;  */
+	text-align: left; 
+    
+	
+	}
